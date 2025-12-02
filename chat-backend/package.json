@@ -8,7 +8,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": ["chat", "websocket", "mongodb", "real-time"],
-  "author": "",
+  "author": "Akash Turkhade",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
