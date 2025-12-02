@@ -47,7 +47,7 @@ Before running this application, make sure you have:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/chat-application.git
+git clone https://github.com/Akash79665/chat-application.git
 cd chat-application
 ```
 
@@ -301,8 +301,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👨‍💻 Author
 
 Your Name
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: https://github.com/Akash79665/chat-application.git
+- Email: apturkhade@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -313,7 +313,7 @@ Your Name
 
 ## 📞 Support
 
-For support, email your.email@example.com or open an issue in the GitHub repository.
+For support, email your. apturkhade@gmail.com or open an issue in the GitHub repository.
 
 ---
 
