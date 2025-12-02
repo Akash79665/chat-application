@@ -287,13 +287,13 @@ npm run build
 ## 📸 Screenshots
 
 ### Welcome Screen
-![Welcome Screen](screenshots/welcome-screen.png)
+![Welcome Screen](screenshots/login-page.png)
 
 ### Home Dashboard
 ![Home Page](screenshots/home-page.png)
 
 ### Active Chat
-![Chat Active](screenshots/chat-active.png)
+![Chat Active](screenshots/messaging.png)
 
 ## 🤝 Contributing
 
