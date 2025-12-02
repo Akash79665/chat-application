@@ -284,6 +284,17 @@ npm run build
 - [ ] Mobile app version
 - [ ] End-to-end encryption
 
+## 📸 Screenshots
+
+### Welcome Screen
+![Welcome Screen](screenshots/welcome-screen.png)
+
+### Home Dashboard
+![Home Page](screenshots/home-page.png)
+
+### Active Chat
+![Chat Active](screenshots/chat-active.png)
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
