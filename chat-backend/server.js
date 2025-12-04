@@ -12,13 +12,31 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000', 'http://localhost:5173'],
+  credentials: true
+}));
 app.use(express.json());
 
-// MongoDB Connection - FIXED
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/chatapp')
-.then(() => console.log('✅ MongoDB connected'))
-.catch(err => console.error('❌ MongoDB connection error:', err));
+// MongoDB Connection - FIXED (removed deprecated options)
+mongoose.connect(process.env.MONGODB_URI)
+.then(() => {
+  console.log('✅ MongoDB connected');
+  console.log(`📊 Database: ${mongoose.connection.name}`);
+})
+.catch(err => {
+  console.error('❌ MongoDB connection error:', err.message);
+  process.exit(1);
+});
+
+// Handle MongoDB events
+mongoose.connection.on('disconnected', () => {
+  console.log('⚠️ MongoDB disconnected');
+});
+
+mongoose.connection.on('error', (err) => {
+  console.error('❌ MongoDB error:', err.message);
+});
 
 // Import models
 const User = require('./models/User');
@@ -393,6 +411,11 @@ app.get('/api/rooms/:roomId/messages', async (req, res) => {
 // Start server
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📡 WebSocket server is ready`);
+  console.log('='.repeat(50));
+  console.log('🚀 CHAT SERVER STARTED');
+  console.log('='.repeat(50));
+  console.log(`📡 Port: ${PORT}`);
+  console.log(`🔗 HTTP: http://localhost:${PORT}`);
+  console.log(`🔗 WebSocket: ws://localhost:${PORT}`);
+  console.log('='.repeat(50));
 });
